@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fleurs de Siagne — Muriel, Artisan Fleuriste à Saint-Cézaire-sur-Siagne</title>
+  <meta name="description" content="Fleurs de Siagne, votre fleuriste à Saint-Cézaire-sur-Siagne. Bouquets de mariée, compositions florales, fleurs séchées et plantes. Muriel vous accueille au cœur du village." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='none' stroke='%23c25b6f' stroke-width='4'/><circle cx='50' cy='50' r='6' fill='%23c25b6f'/><path d='M50 20 Q32 34 46 48 Q34 34 50 20' fill='%23e79cab'/><path d='M50 80 Q32 66 46 52 Q34 66 50 80' fill='%23e79cab'/><path d='M20 50 Q34 32 48 46 Q34 34 20 50' fill='%23e79cab'/><path d='M80 50 Q66 32 52 46 Q66 34 80 50' fill='%23e79cab'/><path d='M50 26 Q68 40 54 54 Q66 40 50 26' fill='%23e79cab'/><path d='M50 74 Q68 60 54 46 Q66 60 50 74' fill='%23e79cab'/></svg>" />
+</head>
+<body>
+
+  <!-- ===== LOADER 3D (entrée du site) ===== -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader-flower">
+      <span class="petal p1"></span>
+      <span class="petal p2"></span>
+      <span class="petal p3"></span>
+      <span class="petal p4"></span>
+      <span class="petal p5"></span>
+      <span class="petal p6"></span>
+      <span class="heart"></span>
+    </div>
+    <p class="loader-text">Fleurs de Siagne</p>
+  </div>
+
+  <!-- ===== OVERLAY DE SORTIE 3D ===== -->
+  <div id="exit-overlay" class="exit-overlay" aria-hidden="true">
+    <div class="exit-petals"></div>
+    <p class="exit-text">À très bientôt chez Muriel</p>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav" id="nav">
+    <a href="#accueil" class="nav-logo">Fleurs <em>de</em> Siagne</a>
+    <nav class="nav-links">
+      <a href="#bouquets">Nos Bouquets</a>
+      <a href="#commande">Commander</a>
+      <a href="#avis">Avis</a>
+      <a href="#contact">Contact</a>
+      <a href="#carte">Nous trouver</a>
+      <a href="https://www.facebook.com/muriel.fleursdesiagne" class="nav-fb external" target="_blank" rel="noopener">Facebook</a>
+    </nav>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== HERO avec pétales 3D (Three.js) ===== -->
+  <section class="hero" id="accueil">
+    <div class="hero-bg-slides" id="hero-bg-slides">
+      <div class="hero-bg-slide active" style="background-image:url('images/bouquet-seche.jpg')"></div>
+      <div class="hero-bg-slide" style="background-image:url('images/bouquet-rouge.jpg')"></div>
+      <div class="hero-bg-slide" style="background-image:url('images/mariages.jpg')"></div>
+      <div class="hero-bg-slide" style="background-image:url('images/plantes.jpg')"></div>
+      <div class="hero-bg-slide" style="background-image:url('images/frangipanier.jpg')"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-kicker reveal">Artisan fleuriste depuis 2010</p>
+      <h1 class="hero-title">
+        <span class="line"><span>Fleurs</span></span>
+        <span class="line"><span>de Siagne</span></span>
+      </h1>
+      <p class="hero-sub reveal">Muriel compose pour vous des bouquets uniques,<br />au cœur du village de Saint-Cézaire-sur-Siagne.</p>
+      <div class="hero-cta reveal">
+        <a href="tel:+33493776573" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:8px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          04 93 77 65 73
+        </a>
+        <a href="#bouquets" class="btn btn-ghost">Découvrir nos créations</a>
+      </div>
+      <div class="open-badge reveal" id="open-badge-hero" hidden>
+        <span class="dot"></span>
+        <span class="open-badge-text">…</span>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">glissez</span>
+    </div>
+  </section>
+
+  <!-- ===== À PROPOS ===== -->
+  <section class="about section">
+    <div class="container about-grid">
+      <div class="about-text">
+        <p class="section-kicker">La boutique</p>
+        <h2 class="section-title">Une passion, un savoir-faire</h2>
+        <p>
+          Installée au cœur du charmant village de <strong>Saint-Cézaire-sur-Siagne</strong>,
+          Muriel vous accueille dans sa boutique <strong>Fleurs de Siagne</strong> depuis 2010.
+          Chaque bouquet est composé à la main, avec des fleurs fraîches choisies avec soin :
+          mariages, anniversaires, deuils ou simplement pour le plaisir d'offrir.
+        </p>
+        <ul class="about-list">
+          <li>Bouquets sur mesure &amp; compositions florales</li>
+          <li>Décoration florale de mariages &amp; événements</li>
+          <li>Fleurs séchées &amp; stabilisées</li>
+          <li>Plantes d'intérieur et d'extérieur</li>
+          <li>Livraison dans la journée</li>
+        </ul>
+      </div>
+      <div class="about-card tilt-card">
+        <div class="tilt-inner">
+          <img src="images/hibiscus.jpg" alt="Hibiscus géant rose de la boutique" onerror="this.parentElement.classList.add('img-fallback'); this.remove()" />
+          <div class="about-card-caption">Hibiscus géant — l'une des merveilles de la boutique</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOS BOUQUETS ===== -->
+  <section class="bouquets section" id="bouquets">
+    <div class="container">
+      <p class="section-kicker center">Nos créations</p>
+      <h2 class="section-title center">De quoi sont composés nos bouquets&nbsp;?</h2>
+      <p class="section-sub center">Chaque création marie fleurs de saison, feuillages de Provence et une touche de poésie.</p>
+
+      <div class="cards-grid">
+        <article class="card tilt-card">
+          <div class="tilt-inner">
+            <div class="card-img">
+              <img src="images/bouquet-rouge.jpg" alt="Bouquet rond de roses rouges et lisianthus blancs" onerror="this.parentElement.classList.add('img-fallback','f-red'); this.remove()" />
+            </div>
+            <div class="card-body">
+              <h3>Le Passionné</h3>
+              <p class="compo"><strong>Composition :</strong> roses rouges veloutées, lisianthus blancs et verts, gypsophile (souffle de bébé).</p>
+              <p>L'élégance intemporelle du rouge et blanc, parfait pour déclarer sa flamme ou un mariage romantique.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card tilt-card">
+          <div class="tilt-inner">
+            <div class="card-img">
+              <img src="images/bouquet-rose.jpg" alt="Bouquet de roses roses pastel" onerror="this.parentElement.classList.add('img-fallback','f-pink'); this.remove()" />
+            </div>
+            <div class="card-body">
+              <h3>Le Tendre</h3>
+              <p class="compo"><strong>Composition :</strong> roses roses pastel, roses blanches crème, nuage de gypsophile.</p>
+              <p>Un camaïeu doux et délicat, idéal pour un baptême, une naissance ou un bouquet de mariée bohème.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card tilt-card">
+          <div class="tilt-inner">
+            <div class="card-img">
+              <img src="images/bouquet-seche.jpg" alt="Bouquet de fleurs séchées et stabilisées" onerror="this.parentElement.classList.add('img-fallback','f-dry'); this.remove()" />
+            </div>
+            <div class="card-body">
+              <h3>Le Provençal séché</h3>
+              <p class="compo"><strong>Composition :</strong> hortensia stabilisé, lagurus (queues de lapin), broom, feuillage d'olivier et eucalyptus.</p>
+              <p>Un bouquet éternel aux couleurs de la Provence, qui ne demande aucun entretien.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card tilt-card">
+          <div class="tilt-inner">
+            <div class="card-img">
+              <img src="images/mariages.jpg" alt="Bouquets de mariée réalisés par Fleurs de Siagne" onerror="this.parentElement.classList.add('img-fallback','f-cream'); this.remove()" />
+            </div>
+            <div class="card-body">
+              <h3>Les Mariages</h3>
+              <p class="compo"><strong>Composition :</strong> roses crème, pêche et blanches, lisianthus, gypsophile, eucalyptus… et même tournesols !</p>
+              <p>Bouquets de mariée, boutonnières et décoration complète : Muriel accompagne votre plus beau jour.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card tilt-card">
+          <div class="tilt-inner">
+            <div class="card-img">
+              <img src="images/frangipanier.jpg" alt="Fleurs de frangipanier blanches et jaunes" onerror="this.parentElement.classList.add('img-fallback','f-exotic'); this.remove()" />
+            </div>
+            <div class="card-body">
+              <h3>Les Exotiques</h3>
+              <p class="compo"><strong>Composition :</strong> frangipanier (plumeria), hibiscus géants et plantes fleuries de caractère.</p>
+              <p>Une touche d'ailleurs pour parfumer et illuminer votre intérieur comme votre jardin.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card tilt-card">
+          <div class="tilt-inner">
+            <div class="card-img">
+              <img src="images/plantes.jpg" alt="Alstroemerias et pétunias colorés" onerror="this.parentElement.classList.add('img-fallback','f-garden'); this.remove()" />
+            </div>
+            <div class="card-body">
+              <h3>Le Jardin fleuri</h3>
+              <p class="compo"><strong>Composition :</strong> alstroemerias (lys des Incas), pétunias multicolores et plantes de saison.</p>
+              <p>Des potées généreuses et colorées pour balcons, terrasses et jardinières provençales.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AVIS GOOGLE ===== -->
+  <section class="reviews section" id="avis">
+    <div class="container">
+      <p class="section-kicker center">Ils nous font confiance</p>
+      <h2 class="section-title center">Les avis de nos clients</h2>
+      <p class="section-sub center">Une sélection d'avis publiés sur Google Maps ⭐</p>
+
+      <div class="reviews-grid">
+        <blockquote class="review tilt-card">
+          <div class="tilt-inner">
+            <div class="stars">★★★★★</div>
+            <p>« Un immense merci pour ton magnifique travail. Les fleurs et la décoration florale de notre mariage étaient absolument superbes. Chaque détail était parfaitement pensé&nbsp;: tes compositions ont apporté une touche d'élégance et de poésie qui a enchanté nos invités. »</p>
+            <footer>— Charlène A. <span>· Avis Google</span></footer>
+          </div>
+        </blockquote>
+
+        <blockquote class="review tilt-card">
+          <div class="tilt-inner">
+            <div class="stars">★★★★★</div>
+            <p>« Au centre du village, beaucoup de goût, toujours serviable. »</p>
+            <footer>— Christine A. <span>· Avis Google</span></footer>
+          </div>
+        </blockquote>
+
+        <blockquote class="review tilt-card">
+          <div class="tilt-inner">
+            <div class="stars">★★★★★</div>
+            <p>« J'adore les plantes, et à chaque fois que j'entre chez la fleuriste il y a toujours une plante qui me prend l'œil. Celles que j'ai achetées poussent parfaitement, je les adore&nbsp;! »</p>
+            <footer>— Josh B. <span>· Avis Google</span></footer>
+          </div>
+        </blockquote>
+
+        <blockquote class="review tilt-card">
+          <div class="tilt-inner">
+            <div class="stars">★★★★★</div>
+            <p>« Très très bien. Bouquet impeccable et prix correct. »</p>
+            <footer>— T. Kleparski <span>· Avis Google</span></footer>
+          </div>
+        </blockquote>
+      </div>
+      <div class="reviews-more">
+        <a href="https://www.google.com/maps/place/Fleurs+de+Siagne/@43.6497535,6.7925884,17z/data=!3m1!4b1" target="_blank" rel="noopener" class="btn btn-ghost">
+          Voir tous les avis sur Google Maps
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:10px;vertical-align:-2px"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMMANDE / DEVIS ===== -->
+  <section class="order section" id="commande">
+    <div class="container">
+      <p class="section-kicker center">Commande &amp; devis</p>
+      <h2 class="section-title center">Commandez votre bouquet</h2>
+      <p class="section-sub center">Décrivez votre envie, Muriel vous répond rapidement par email ou téléphone.</p>
+
+      <form class="order-form tilt-card" id="order-form" novalidate>
+        <div class="tilt-inner">
+          <div class="form-grid">
+            <label>
+              <span>Votre nom *</span>
+              <input type="text" name="nom" required placeholder="ex : Marie Dupont" />
+            </label>
+            <label>
+              <span>Votre téléphone</span>
+              <input type="tel" name="tel" placeholder="ex : 06 12 34 56 78" />
+            </label>
+            <label>
+              <span>Occasion *</span>
+              <select name="occasion" required>
+                <option value="" disabled selected>Choisir…</option>
+                <option>Anniversaire</option>
+                <option>Mariage</option>
+                <option>Naissance / Baptême</option>
+                <option>Saint-Valentin</option>
+                <option>Deuil</option>
+                <option>Remerciement</option>
+                <option>Juste pour le plaisir</option>
+                <option>Autre</option>
+              </select>
+            </label>
+            <label>
+              <span>Budget approximatif</span>
+              <select name="budget">
+                <option value="" disabled selected>Choisir…</option>
+                <option>Moins de 20 €</option>
+                <option>20 – 40 €</option>
+                <option>40 – 60 €</option>
+                <option>60 – 100 €</option>
+                <option>Plus de 100 €</option>
+              </select>
+            </label>
+            <label>
+              <span>Date souhaitée</span>
+              <input type="date" name="date" />
+            </label>
+            <label>
+              <span>Style / couleurs préférés</span>
+              <input type="text" name="style" placeholder="ex : tons pastel, champêtre, roses rouges…" />
+            </label>
+            <label class="form-full">
+              <span>Votre message *</span>
+              <textarea name="message" rows="4" required placeholder="Décrivez le bouquet de vos rêves, une livraison éventuelle, etc."></textarea>
+            </label>
+          </div>
+          <p class="form-note">En cliquant sur « Envoyer », votre logiciel de messagerie s'ouvre avec la demande pré-remplie, adressée à <strong>fleursdesiagne@orange.fr</strong>. Vous pouvez aussi appeler directement le <a href="tel:+33493776573">04 93 77 65 73</a>.</p>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
+            <span class="form-feedback" id="form-feedback" role="alert"></span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact">
+    <div class="container contact-grid">
+      <div>
+        <p class="section-kicker">Contact</p>
+        <h2 class="section-title">Passez nous voir, ou appelez Muriel</h2>
+        <ul class="contact-list">
+          <li>
+            <span class="ico">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div><strong>Adresse</strong><br />1 Rue de la Liberté<br />06530 Saint-Cézaire-sur-Siagne</div>
+          </li>
+          <li>
+            <span class="ico">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <div><strong>Téléphone</strong><br /><a href="tel:+33493776573">04 93 77 65 73</a></div>
+          </li>
+          <li>
+            <span class="ico">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <div><strong>Email</strong><br /><a href="mailto:fleursdesiagne@orange.fr">fleursdesiagne@orange.fr</a></div>
+          </li>
+          <li>
+            <span class="ico">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </span>
+            <div><strong>Facebook</strong><br /><a href="https://www.facebook.com/muriel.fleursdesiagne" class="external" target="_blank" rel="noopener">muriel.fleursdesiagne</a></div>
+          </li>
+        </ul>
+      </div>
+      <div class="hours-card tilt-card">
+        <div class="tilt-inner">
+          <h3>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-4px;margin-right:10px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Horaires d'ouverture
+          </h3>
+          <div class="open-badge in-card" id="open-badge-card" hidden>
+            <span class="dot"></span>
+            <span class="open-badge-text">…</span>
+          </div>
+          <table class="hours">
+            <tr><td>Lundi</td><td class="closed">Fermé</td></tr>
+            <tr><td>Mardi</td><td>9h – 12h · 16h – 19h</td></tr>
+            <tr><td>Mercredi</td><td>9h – 12h · 16h – 19h</td></tr>
+            <tr><td>Jeudi</td><td>9h – 12h · 16h – 18h</td></tr>
+            <tr><td>Vendredi</td><td>9h – 12h · 16h – 19h</td></tr>
+            <tr><td>Samedi</td><td>9h – 12h · 16h – 19h</td></tr>
+            <tr><td>Dimanche</td><td>9h – 12h</td></tr>
+          </table>
+          <p class="hours-note">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:6px"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            Livraison dans la journée &amp; en moins de 4h
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GOOGLE MAPS ===== -->
+  <section class="map section" id="carte">
+    <div class="container">
+      <p class="section-kicker center">Nous trouver</p>
+      <h2 class="section-title center">Au cœur du village</h2>
+    </div>
+    <div class="map-wrap">
+      <iframe
+        title="Fleurs de Siagne sur Google Maps"
+        src="https://www.google.com/maps?q=Fleurs+de+Siagne,+1+Rue+de+la+Libert%C3%A9,+06530+Saint-C%C3%A9zaire-sur-Siagne&z=16&output=embed"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-logo">Fleurs <em>de</em> Siagne</p>
+        <p>Artisan fleuriste — Muriel Serrano<br />1 Rue de la Liberté, 06530 Saint-Cézaire-sur-Siagne</p>
+      </div>
+      <div class="footer-links">
+        <a href="tel:+33493776573">04 93 77 65 73</a>
+        <a href="mailto:fleursdesiagne@orange.fr">fleursdesiagne@orange.fr</a>
+        <a href="https://www.facebook.com/muriel.fleursdesiagne" class="external" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 Fleurs de Siagne — <a href="privacy.html" class="footer-privacy">Politique de confidentialité</a></p>
+  </footer>
+
+  <!-- ===== LIGHTBOX 3D ===== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Galerie photo">
+    <button class="lb-close" id="lb-close" aria-label="Fermer">✕</button>
+    <button class="lb-arrow lb-prev" id="lb-prev" aria-label="Photo précédente">‹</button>
+    <figure class="lb-stage">
+      <img id="lb-img" src="" alt="" />
+      <figcaption id="lb-caption"></figcaption>
+    </figure>
+    <button class="lb-arrow lb-next" id="lb-next" aria-label="Photo suivante">›</button>
+    <div class="lb-counter" id="lb-counter"></div>
+  </div>
+
+  <!-- ===== BOUTON CONTACT FLOTTANT ===== -->
+  <div class="fab" id="fab">
+    <div class="fab-options" id="fab-options">
+      <a href="https://wa.me/33493776573?text=Bonjour%20Muriel%2C%20je%20souhaiterais%20commander%20un%20bouquet" target="_blank" rel="noopener" class="fab-option fab-wa" aria-label="WhatsApp">
+        <span class="fab-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span><span class="fab-label">WhatsApp</span>
+      </a>
+      <a href="tel:+33493776573" class="fab-option fab-tel" aria-label="Appeler">
+        <span class="fab-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span class="fab-label">Appeler</span>
+      </a>
+      <a href="mailto:fleursdesiagne@orange.fr" class="fab-option fab-mail" aria-label="Email">
+        <span class="fab-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><span class="fab-label">Email</span>
+      </a>
+    </div>
+    <button class="fab-main" id="fab-main" aria-label="Contacter Muriel" aria-expanded="false">
+      <span class="fab-main-ico">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      </span>
+    </button>
+  </div>
+
+  <!-- GSAP (animations) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

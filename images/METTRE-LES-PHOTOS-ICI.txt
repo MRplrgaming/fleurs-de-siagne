@@ -1,0 +1,12 @@
+Place les photos de Muriel dans ce dossier avec EXACTEMENT ces noms :
+
+  bouquet-rouge.jpg   -> le bouquet de roses rouges et lisianthus blancs
+  bouquet-rose.jpg    -> le bouquet de roses roses/blanches (utilisé aussi en haut du site)
+  bouquet-seche.jpg   -> le bouquet de fleurs séchées (fond mur en pierre)
+  frangipanier.jpg    -> les fleurs de frangipanier blanches/jaunes
+  plantes.jpg         -> les alstroemerias et pétunias colorés
+  hibiscus.jpg        -> l'hibiscus géant rose (optionnel)
+  mariages.jpg        -> le collage des 9 bouquets de mariée
+
+Formats acceptés : .jpg (renomme si besoin).
+Si une photo manque, le site affiche automatiquement un joli visuel de remplacement.
