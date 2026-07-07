@@ -56,21 +56,20 @@ a { color: var(--gold); }
 .loader.done { opacity: 0; visibility: hidden; pointer-events: none; }
 
 .loader-logo {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 18px;
 }
-.loader-logo-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.loader-svg {
+.loader-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 40px rgba(201, 162, 75, 0.25), 0 0 80px rgba(201, 162, 75, 0.1);
   animation: logoFloat 3.2s ease-in-out infinite;
-  filter: drop-shadow(0 0 50px rgba(201, 162, 75, 0.2));
 }
 @keyframes logoFloat {
   0%, 100% { transform: translateY(0) scale(1); }
