@@ -16,14 +16,34 @@
 
   <!-- ===== LOADER 3D (entrée du site) ===== -->
   <div id="loader" class="loader" aria-hidden="true">
-    <div class="loader-flower">
-      <span class="petal p1"></span>
-      <span class="petal p2"></span>
-      <span class="petal p3"></span>
-      <span class="petal p4"></span>
-      <span class="petal p5"></span>
-      <span class="petal p6"></span>
-      <span class="heart"></span>
+    <div class="loader-logo">
+      <svg class="loader-svg" width="160" height="160" viewBox="0 0 160 160" fill="none">
+        <!-- Cercle extérieur élégant -->
+        <circle cx="80" cy="80" r="72" stroke="url(#lg)" stroke-width="1.5" fill="none" opacity="0.4"/>
+        <!-- Pétales stylisés -->
+        <path d="M80 18Q62 38 80 62Q98 38 80 18" fill="url(#lg)" opacity="0.7"/>
+        <path d="M80 142Q62 122 80 98Q98 122 80 142" fill="url(#lg)" opacity="0.7"/>
+        <path d="M18 80Q38 62 62 80Q38 98 18 80" fill="url(#lg)" opacity="0.7"/>
+        <path d="M142 80Q122 62 98 80Q122 98 142 80" fill="url(#lg)" opacity="0.7"/>
+        <path d="M38 38Q52 50 56 56Q50 52 38 38" fill="url(#lg)" opacity="0.5"/>
+        <path d="M122 122Q108 110 104 104Q110 108 122 122" fill="url(#lg)" opacity="0.5"/>
+        <path d="M38 122Q52 110 56 104Q50 108 38 122" fill="url(#lg)" opacity="0.5"/>
+        <path d="M122 38Q108 50 104 56Q110 52 122 38" fill="url(#lg)" opacity="0.5"/>
+        <!-- Cœur de la fleur -->
+        <circle cx="80" cy="80" r="8" fill="url(#lg)"/>
+        <circle cx="80" cy="80" r="3" fill="#f7f4ee" opacity="0.6"/>
+        <!-- Feuilles fines décoratives -->
+        <path d="M80 18Q90 10 96 14Q88 16 80 18" fill="url(#lg)" opacity="0.35"/>
+        <path d="M80 142Q70 150 64 146Q72 144 80 142" fill="url(#lg)" opacity="0.35"/>
+        <!-- Dégradé -->
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#e6cf94"/>
+            <stop offset="50%" stop-color="#c9a24b"/>
+            <stop offset="100%" stop-color="#b98f2e"/>
+          </linearGradient>
+        </defs>
+      </svg>
     </div>
     <p class="loader-text">Fleurs de Siagne</p>
   </div>
