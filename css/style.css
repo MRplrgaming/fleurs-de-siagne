@@ -364,7 +364,7 @@ a { color: var(--gold); }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 .scroll-line {
   width: 1px;
@@ -1011,7 +1011,7 @@ body.no-js .section-sub { opacity: 1; }
   .hero-cta { flex-direction: column; align-items: center; }
   .btn { padding: 14px 30px; font-size: 12px; letter-spacing: 1.5px; width: 100%; max-width: 300px; }
   .btn-ghost { backdrop-filter: none; }
-  .hero-scroll { bottom: 16px; }
+  .hero-scroll { bottom: 64px; gap: 10px; }
   .scroll-line { height: 30px; }
   .scroll-text { font-size: 10px; }
 
