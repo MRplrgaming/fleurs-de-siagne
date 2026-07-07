@@ -58,26 +58,40 @@ a { color: var(--gold); }
 .loader-logo {
   position: relative;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+.loader-logo-inner {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 .loader-svg {
-  animation: logoReveal 2.6s ease-in-out infinite alternate;
-  filter: drop-shadow(0 0 40px rgba(201, 162, 75, 0.25));
+  animation: logoFloat 3.2s ease-in-out infinite;
+  filter: drop-shadow(0 0 50px rgba(201, 162, 75, 0.2));
 }
-@keyframes logoReveal {
-  0%   { transform: scale(0.92) rotateZ(-8deg); opacity: 0.7; }
-  100% { transform: scale(1.04) rotateZ(8deg);  opacity: 1; }
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-6px) scale(1.01); }
 }
 .loader-text {
   font-family: var(--font-title);
-  font-size: 34px;
-  letter-spacing: 8px;
+  font-size: 28px;
+  letter-spacing: 6px;
   text-transform: uppercase;
-  color: var(--gold);
-  animation: pulseText 1.8s ease-in-out infinite alternate;
+  color: var(--cream);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  animation: pulseText 2.4s ease-in-out infinite alternate;
+  margin-top: 6px;
 }
-@keyframes pulseText { from { opacity: 0.55; } to { opacity: 1; } }
+.loader-text em {
+  color: var(--gold);
+  font-style: italic;
+  letter-spacing: 4px;
+}
+@keyframes pulseText { from { opacity: 0.6; } to { opacity: 1; } }
 
 /* ============ OVERLAY DE SORTIE ============ */
 .exit-overlay {
