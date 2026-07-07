@@ -6,10 +6,14 @@
 
   /* ---------- 1. LOADER (animation d'entrée) ---------- */
   var loader = document.getElementById("loader");
-  var MIN_LOADER_TIME = 2200; // laisse la fleur 3D s'épanouir
+  var MIN_LOADER_TIME = 2200;
   var loadStart = Date.now();
+  var loaderDone = false;
 
   function hideLoader() {
+    if (loaderDone) return;
+    loaderDone = true;
+
     var elapsed = Date.now() - loadStart;
     var wait = Math.max(0, MIN_LOADER_TIME - elapsed);
     setTimeout(function () {
