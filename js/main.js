@@ -364,12 +364,13 @@
         "Merci !";
 
       window.location.href =
-        "mailto:fleursdesiagne@orange.fr" +
-        "?subject=" + encodeURIComponent(subject) +
+        "https://mail.google.com/mail/?view=cm&fs=1" +
+        "&to=fleursdesiagne%40orange.fr" +
+        "&su=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
 
       feedback.classList.remove("error");
-      feedback.textContent = "Votre messagerie s'ouvre… il ne reste qu'à cliquer sur Envoyer.";
+      feedback.textContent = "Gmail s'ouvre… il ne reste qu'à cliquer sur Envoyer.";
     });
   }
 
