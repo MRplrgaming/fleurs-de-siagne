@@ -92,6 +92,28 @@ a { color: var(--gold); }
 }
 @keyframes pulseText { from { opacity: 0.6; } to { opacity: 1; } }
 
+.loader-bar-wrap {
+  width: 180px;
+  height: 2px;
+  background: rgba(247, 244, 238, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.loader-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--gold-light), var(--gold), var(--gold-light));
+  border-radius: 2px;
+  animation: fillBar 2.2s ease-in-out forwards;
+  box-shadow: 0 0 8px rgba(201, 162, 75, 0.4);
+}
+@keyframes fillBar {
+  0%   { width: 0%; }
+  50%  { width: 55%; }
+  85%  { width: 85%; }
+  100% { width: 100%; }
+}
+
 /* ============ OVERLAY DE SORTIE ============ */
 .exit-overlay {
   position: fixed;
