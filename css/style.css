@@ -62,14 +62,14 @@ a { color: var(--gold); }
   justify-content: center;
   gap: 18px;
 }
-.loader-img {
+.loader-svg {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--gold);
-  box-shadow: 0 0 40px rgba(201, 162, 75, 0.25), 0 0 80px rgba(201, 162, 75, 0.1);
+  background: radial-gradient(circle at 50% 50%, #f7f0ea, #ece0d8, #dccbc0);
+  box-shadow: 0 0 30px rgba(201, 162, 75, 0.2), 0 0 60px rgba(201, 162, 75, 0.1);
   animation: logoFloat 3.2s ease-in-out infinite;
+  padding: 6px;
 }
 @keyframes logoFloat {
   0%, 100% { transform: translateY(0) scale(1); }
