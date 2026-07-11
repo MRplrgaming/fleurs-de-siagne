@@ -179,7 +179,7 @@ a { color: var(--gold); }
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1085,4 +1085,7 @@ body.no-js .section-sub { opacity: 1; }
   .footer-logo { font-size: 22px; }
   .footer-grid { gap: 28px; }
   .footer-copy { font-size: 11px; padding-top: 20px; }
+
+  .logo img { height: 50px; }
+  .hero-buttons .btn { font-size: 14px; padding: 12px 20px; }
 }
