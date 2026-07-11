@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mrplrgaming.github.io/fleurs-de-siagne/sitemap.xml
